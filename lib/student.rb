@@ -36,6 +36,10 @@ class Student
     sam = self.new_from_db(data)
     arr << sam
   end
+  
+  def self.first_x_students_in_grade_10 
+    
+  end
 
   
   def save
