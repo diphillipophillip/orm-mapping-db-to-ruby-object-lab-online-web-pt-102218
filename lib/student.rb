@@ -33,7 +33,8 @@ class Student
     arr = []
     sql = "SELECT * FROM students WHERE grade <= 11"
     this = DB[:conn].execute(sql).flatten
-    arr << this[0]
+    arr << this[1]
+    arr
   end
 
   
