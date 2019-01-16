@@ -30,9 +30,9 @@ class Student
   end
   
   def self.students_below_12th_grade 
-    arr = []
+    
     sql = "SELECT * FROM students WHERE grade < '12'"
-    arr << DB[:conn].execute(sql)
+    this = DB[:conn].execute(sql).flatten
     binding.pry
   end
   
