@@ -38,11 +38,7 @@ class Student
   end
   
   def self.first_X_students_in_grade_10(number)
-    sql = "SELECT * FROM students WHERE grade = 10"
-    DB[:conn].execute(sql, number).map do |i| 
-      self.new_from_db(i) 
-      binding.pry
-    end
+  
   end
 
   
