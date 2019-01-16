@@ -30,9 +30,10 @@ class Student
   end
   
   def self.students_below_12th_grade 
+    arr = []
     sql = "SELECT * FROM students WHERE grade < '12'"
     this = DB[:conn].execute(sql).flatten
-    this
+    arr << this[1]
   end
   
   def save
