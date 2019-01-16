@@ -30,7 +30,7 @@ class Student
   end
   
   def self.students_below_12th_grade 
-    sql = "SELECT name FROM students WHERE grade <= 11"
+    sql = "SELECT * FROM students WHERE grade <= 11"
     data = DB[:conn].execute(sql).flatten
     sam = self.new_from_db(data)
     binding.pry
