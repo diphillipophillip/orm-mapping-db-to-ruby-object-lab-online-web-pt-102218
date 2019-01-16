@@ -18,10 +18,15 @@ class Student
   end
 
   def self.find_by_name(name)
+    binding.pry
     sql = "SELECT * FROM students WHERE name = ?"
     DB[:conn].execute(sql, name).map do |i| 
       self.new_from_db(i)
     end.first
+  end
+  
+  def self.all_students_in_grade_9(grade)
+    
   end
   
   def save
