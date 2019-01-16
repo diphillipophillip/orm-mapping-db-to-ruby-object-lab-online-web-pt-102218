@@ -43,10 +43,11 @@ class Student
   end
   
   def self.first_student_in_grade_10 
+    arr = []
     sql = "SELECT * FROM students WHERE grade = 10 LIMIT 1"
     data = DB[:conn].execute(sql).flatten
     student = self.new_from_db(data)
-    binding.pry
+    arr << student
   end 
 
   
