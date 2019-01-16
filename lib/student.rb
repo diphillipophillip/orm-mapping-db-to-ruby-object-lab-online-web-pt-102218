@@ -35,6 +35,7 @@ class Student
     this = DB[:conn].execute(sql).flatten
     arr << this[1]
     arr
+    binding.pry
   end
 
   
