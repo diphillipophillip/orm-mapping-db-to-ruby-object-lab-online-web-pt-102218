@@ -33,7 +33,7 @@ class Student
     sql = "SELECT name FROM students WHERE grade <= 11"
     data = DB[:conn].execute(sql).flatten
     sam = self.new 
-    same.name = data
+    sam.name = data
   end
 
   
