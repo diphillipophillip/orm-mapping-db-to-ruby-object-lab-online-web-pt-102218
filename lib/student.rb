@@ -26,7 +26,8 @@ class Student
   
   def self.all_students_in_grade_9
     sql = "SELECT * FROM students WHERE grade = '9'"
-    DB[:conn].execute(sql)
+    this = DB[:conn].execute(sql)
+    binding.pry
   end
   
   def self.students_below_12th_grade 
