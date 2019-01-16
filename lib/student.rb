@@ -41,7 +41,7 @@ class Student
     sql = "SELECT * FROM students WHERE grade = ?"
     DB[:conn].execute(sql, number).map do |i| 
       self.new_from_db(i) 
-    end.first
+    end
   end
 
   
