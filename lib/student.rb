@@ -34,8 +34,6 @@ class Student
     data = DB[:conn].execute(sql).flatten
     sam = self.new 
     sam.name = data.join
-    binding.pry
-    
   end
 
   
