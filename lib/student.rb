@@ -49,6 +49,14 @@ class Student
     student = self.new_from_db(data)
     
   end 
+  
+  def self.all_students_in_grade_X(grade)
+    arr = []
+    sql = "SELECT * FROM students WHERE grade = ?"
+    data = DB[:conn].execute(sql, grade).flatten 
+    student = self.new_from_db(data)
+    arr << student
+  end 
 
   
   def save
