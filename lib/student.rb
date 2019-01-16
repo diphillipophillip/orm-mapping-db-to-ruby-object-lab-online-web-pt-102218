@@ -33,8 +33,8 @@ class Student
   def self.students_below_12th_grade 
     sql = "SELECT * FROM students WHERE grade < '12' LIMIT 1"
     this = DB[:conn].execute(sql).flatten
-    end
   end
+
   
   def save
     sql = <<-SQL
