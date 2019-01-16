@@ -56,6 +56,7 @@ class Student
     data = DB[:conn].execute(sql, grade).flatten 
     student = self.new_from_db(data)
     arr << student
+    binding.pry
   end 
 
   
