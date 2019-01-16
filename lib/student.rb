@@ -33,7 +33,7 @@ class Student
     sql = "SELECT * FROM students WHERE grade <= 11"
     this = DB[:conn].execute(sql).flatten
     that = this.pop
-    that.pop
+    binding.pry
   end
 
   
