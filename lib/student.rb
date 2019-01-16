@@ -47,7 +47,7 @@ class Student
     sql = "SELECT * FROM students WHERE grade = 10 LIMIT 1"
     data = DB[:conn].execute(sql).flatten
     student = self.new_from_db(data)
-    arr << student
+    
   end 
 
   
