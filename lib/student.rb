@@ -34,6 +34,7 @@ class Student
     sql = "SELECT * FROM students WHERE grade < '12'"
     this = DB[:conn].execute(sql).flatten
     arr << this[1]
+    binding.pry
   end
   
   def save
