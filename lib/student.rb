@@ -32,7 +32,7 @@ class Student
   
   def self.students_below_12th_grade 
     sql = "SELECT * FROM students WHERE grade < '12'"
-    this = DB[:conn].execute(sql).flatten 
+    this = DB[:conn].execute(sql).flatten.size 
     
   end
   
