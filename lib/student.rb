@@ -31,8 +31,7 @@ class Student
   
   def self.students_below_12th_grade 
     sql = "SELECT * FROM students WHERE grade < '12'"
-    DB[:conn].execute(sql)
-    binding.pry
+    DB[:conn].execute(sql).size
   end
   
   def save
@@ -58,6 +57,6 @@ class Student
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
-    DB[:conn].execute(sql).size
+    DB[:conn].execute(sql)
   end
 end
